@@ -1,0 +1,22 @@
+#ALIASES
+alias lsa='ls -a'
+
+#FUNCTIONS
+
+#open current folder
+open(){
+    nautilus ${PWD}
+}
+
+
+#get docker lamp
+getlamp(){
+
+    git clone https://github.com/carlosreig/docker-lamp.git
+
+    if [ $1 ];then
+        mv ${PWD}/docker-lamp ${PWD}/$1
+    fi
+    
+
+}
